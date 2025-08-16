@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect theo thiết bị</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Kiểm tra user agent để xem có phải mobile không
+      var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // Nếu là điện thoại
+        window.location.href = "https://example.com/mobile"; 
+      } else {
+        // Nếu là máy tính
+        window.location.href = "https://example.com/desktop"; 
+      }
+    });
+  </script>
+</head>
+<body>
+  <p>Đang chuyển hướng, vui lòng chờ...</p>
+</body>
+</html>
